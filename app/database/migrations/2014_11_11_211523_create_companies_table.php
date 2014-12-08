@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsTable extends Migration {
+class CreateCompaniesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -11,7 +11,7 @@ class CreateProductsTable extends Migration {
 	 * @return void
 	 */
 	public function up() {
-		Schema::create('products', function($table) {
+		Schema::create('companies', function($table) {
 
 	        # Increments method will make a primary key
 	        $table->increments('id');
@@ -21,10 +21,12 @@ class CreateProductsTable extends Migration {
 	        $table->timestamps();
 
 			# The rest of the fields
-			$table->string('company');
-			$table->string('product');
-			$table->date('purchase_date');
-			$table->date('sale_date'); //sets alert
+			$table->string('name');
+			$table->string('phone');
+			$table->string('street');
+			$table->string('city');
+			$table->string('state');
+			$table->integer('zip');
 		});
 	}
 
@@ -34,6 +36,7 @@ class CreateProductsTable extends Migration {
 	 * @return void
 	 */
 	public function down() {
-		Schema::drop('products');
+		Schema::drop('companies');
 	}
+
 }
