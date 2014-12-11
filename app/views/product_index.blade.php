@@ -11,6 +11,13 @@
 	@endif
 
 	@if(sizeof($products) == 0)
+		
+		<button type="button" class="btn btn-default btn-xs">
+			<a href='/product/create'> Add Product </a></li>
+		</button>
+
+		<br><br>
+
 		No results
 	
 	@else
@@ -25,12 +32,6 @@
 		
 		<br>
 
-		
-		<button type="button" class="btn btn-default btn-xs">
-			<a href='/product/create'> Add Product </a></li>
-		</button>
-
-		<br><br>
 
 		<table class="table table-hover">
 			<tr>
