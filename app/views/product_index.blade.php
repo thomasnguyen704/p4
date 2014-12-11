@@ -5,19 +5,18 @@
 @stop
 
 @section('content')
-		
-	<button type="button" class="btn btn-default btn-xs">
-		<a href='/product/create'> Add Product </a></li>
-	</button>
-
-	<br><br>
 
 	@if($query)
 		<p> You searched for <b>{{{ $query }}}</b> </p>
 	@endif
 
 	@if(sizeof($products) == 0)
+		
+		<button type="button" class="btn btn-default btn-xs">
+			<a href='/product/create'> Add Product </a></li>
+		</button>
 
+		<br><br>
 		No results
 	
 	@else
@@ -31,7 +30,12 @@
 		</form>
 		
 		<br>
+		
+		<button type="button" class="btn btn-default btn-xs">
+			<a href='/product/create'> Add Product </a></li>
+		</button>
 
+		<br><br>
 
 		<table class="table table-hover">
 			<tr>
