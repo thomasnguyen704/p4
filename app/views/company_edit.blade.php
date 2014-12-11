@@ -60,13 +60,4 @@
 	{{ Form::close() }}
 
 
-	<br>
-
-
-	{{----- # DELETE -----}}
-	{{ Form::open(array('url' => '/company/delete')) }}
-		{{ Form::hidden('id',$company['id']); }}
-		<button onClick='parentNode.submit();return false;'>Delete</button>
-	{{ Form::close() }}
-
 @stop
