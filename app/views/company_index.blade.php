@@ -6,17 +6,17 @@
 
 @section('content')
 
+	<button type="button" class="btn btn-default btn-xs">
+			<a href='/company/create'> Add Company </a></li>
+	</button>
+		
+	<br><br>
+	
 	@if($query)
 		<p> You searched for <b>{{{ $query }}}</b> </p>
 	@endif
 
 	@if(sizeof($companies) == 0)
-		
-		<button type="button" class="btn btn-default btn-xs">
-			<a href='/company/create'> Add Company </a></li>
-		</button>
-		
-		<br><br>
 
 		No results
 	
