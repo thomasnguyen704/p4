@@ -32,8 +32,9 @@
 						<li><a href='/product'> Products </a></li>
 						<li><a href='/company'> Companies </a></li>
 						<li><a href='/logout'> Log out {{ Auth::user()->email; }} </a></li>
+					</ul>
 					@else
-						<li> <a href='/'> Home </a></li>
+					<ul class="nav navbar-nav small pull-right">
 						<li><a href='/signup'> Sign up </a> </li>
 						<li><a href='/login'> Log in </a></li> 
 					</ul>
