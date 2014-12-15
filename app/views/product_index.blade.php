@@ -17,17 +17,22 @@
 		</button>
 
 		<br><br>
+		
 		No results
 	
 	@else
-		<form role="form">
+		<div class="form-inline pull-right" role="form">
 			<div class="form-group">
 				{{ Form::open(array('url' => '/product', 'method' => 'GET')) }}
-					{{ Form::text('query', 'Search item'); }}
-					{{ Form::submit('Search'); }}
+					{{ Form::text('query','',
+						array(
+							'placeholder' => 'Search product item',
+							'class' => 'form-control'
+						)
+					) }}
 				{{ Form::close() }}
 			</div>
-		</form>
+		</div>
 		
 		<br>
 		
@@ -35,30 +40,34 @@
 			<a href='/product/create'> Add Product </a></li>
 		</button>
 
-		<br><br>
+		<table id="myTable" class="table table-hover tablesorter">
+			<thead>	
+				<tr>
+					<th> Prucahse Date </th>
+					<th> Item </th>
+					<th> Company </th>
+					<th> Cost </th>
+					<th> Units </th>
+					<th> Edit </th>
+				</tr>
+			</thead>
 
-		<table class="table table-hover">
-			<tr>
-				<th> Item </th>
-				<th> Company </th>
-				<th> Prucahse Date </th>
-				<th> Cost </th>
-				<th> Units </th>
-				<th> Edit </th>
-			</tr>
-		
-		@foreach($products as $product)
-			<tr>
-				<td> {{ $product['item'] }} </td>
-				<td> {{ $product['company']['name'] }} </td>
-				<td> {{ $product['purchase_date'] }} </td>
-				<td> {{ $product['cost'] }} </td>
-				<td> {{ $product['units'] }} </td>
-				<td> <a href='/product/edit/{{$product['id']}}'>Edit</a> </td>
-			</tr>	
-		@endforeach
-		
+			<tbody>
+				@foreach($products as $product)
+				<tr>
+					<td> {{ $product['purchase_date'] }} </td>		
+					<td> {{ $product['item'] }} </td>
+					<td> {{ $product['company']['name'] }} </td>
+					<td> {{ $product['cost'] }} </td>
+					<td> {{ $product['units'] }} </td>
+					<td> <a href='/product/edit/{{$product['id']}}'>Edit</a> </td>
+				</tr>
+				@endforeach
+			</tbody>
+
 		</table>
+
+
 	
 	@endif
 @stop

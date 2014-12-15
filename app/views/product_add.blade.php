@@ -2,35 +2,127 @@
 
 
 @section('title')
-	Add a new product	
+	Add a New Product
 @stop
 
 
 @section('content')
 
-	@foreach($errors->all() as $message) 
-		<div class="alert alert-danger" role="alert">{{ $message }}</div>
-	@endforeach <br>
+@foreach($errors->all() as $message) 
+	<div class="alert alert-danger" role="alert"> {{ $message }} </div>
+@endforeach 
+
+<br>
+
+<div class="form-horizontal" role="form">
 
 	{{ Form::open(array('url' => '/product/create')) }}
+	
+		<div class="form-group">
+			{{ Form::label('item','Item',
+				array(
+					'class' => 'col-lg-1 col-md-1 col-sm-2 col-xs-2 control-label'
+				)
+			) }}
+			<div class="col-lg-11 col-md-11 col-sm-10 col-xs-10">
+				{{ Form::input('text', 'item', '', 
+					array(
+						'class' => 'form-control'
+					)
+				) }}
+			</div>
+		</div>
 
-		{{ Form::label('item','Item') }} <br>
-		{{ Form::text('item'); }} <br><br>
 
-		{{ Form::label('company_id', 'Company') }} <br>
-		{{ Form::select('company_id', $companies); }} <br><br>
 
-		{{ Form::label('purchase_date','Purchase Date (YYYY-MM-DD)') }} <br>
-		{{ Form::text('purchase_date'); }} <br><br>
 
-		{{ Form::label('cost','Cost') }} <br>
-		{{ Form::text('cost'); }} <br><br>
+		<div class="form-group">
+			{{ Form::label('company_id', 'Company',
+				array(
+					'class' => 'col-lg-1 col-md-1 col-sm-2 col-xs-2 control-label'
+				)
+			) }}
+			<div class="col-lg-11 col-md-11 col-sm-10 col-xs-10">
+				{{ Form::select('company_id', 
+					array(
+						'Companies' => $companies
+					),
 
-		{{ Form::label('units','Units') }} <br>
-		{{ Form::text('units'); }} <br><br>
+					null,
 
-		{{ Form::submit('Add'); }}
+					array(
+						'class' => 'form-control'
+					)
+				) }}
+			</div>
+		</div>
+
+
+
+
+		<div class="form-group">
+			{{ Form::label('purchase_date','Purchase Date',
+				array(
+					'class' => 'col-lg-1 col-md-1 col-sm-2 col-xs-2 control-label'
+				)
+			) }}
+			<div class="col-lg-11 col-md-11 col-sm-10 col-xs-10">
+				{{ Form::input('date', 'purchase_date', 'null', 
+					array(
+						'class' => 'form-control'
+					)
+				) }}
+			</div>
+		</div>
+
+
+
+
+		<div class="form-group">
+			{{ Form::label('cost','Cost',
+				array(
+					'class' => 'col-lg-1 col-md-1 col-sm-2 col-xs-2 control-label'
+				)
+			) }}
+			<div class="col-lg-11 col-md-11 col-sm-10 col-xs-10">
+				{{ Form::input('number', 'cost', 'null', 
+					array(
+						'class' => 'form-control'
+					)
+				) }}
+			</div>
+		</div>
+
+
+
+
+		<div class="form-group">
+			{{ Form::label('units','Units',
+				array(
+					'class' => 'col-lg-1 col-md-1 col-sm-2 col-xs-2 control-label'
+				)
+			) }}
+			<div class="col-lg-11 col-md-11 col-sm-10 col-xs-10">
+				{{ Form::input('number', 'units', 'null',
+					array(
+						'class' => 'form-control'
+					)
+				) }}
+			</div>
+		</div>
+
+
+
+
+		{{ Form::submit('Add', 
+			array(
+				'class' => 'pull-right btn btn-default'
+			)
+		) }}
+
 
 	{{ Form::close() }}
 
+</div>
 @stop
+

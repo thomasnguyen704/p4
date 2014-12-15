@@ -1,71 +1,86 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-	<meta charset="UTF-8">
-	<title> Thomas Nguyen | @yield('title') </title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<title> Thomas Nguyen | @yield('title') </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/js/tablesorter/themes/blue/style.css"> <!-- tablesorter blue theme -->
+	</head>
 
-<body>
+	<body>
+		@if(Session::get('flash_message'))
+			<div class="flash-message alert alert-info" role="alert">
+				{{ Session::get('flash_message') }}
+			</div>
+		@endif
 
-	@if(Session::get('flash_message'))
-		<div class="flash-message alert alert-info" role="alert">
-			{{ Session::get('flash_message') }}
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/">Inventory Management</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					@if(Auth::check())
+					<ul class="nav navbar-nav small pull-right">
+						<li><a href='/product'> Products </a></li>
+						<li><a href='/company'> Companies </a></li>
+						<li><a href='/logout'> Log out {{ Auth::user()->email; }} </a></li>
+					@else
+						<li> <a href='/'> Home </a></li>
+						<li><a href='/signup'> Sign up </a> </li>
+						<li><a href='/login'> Log in </a></li> 
+					</ul>
+					@endif
+				</div>
+			</div>
+		</div> <!-- END navbar -->
+
+		<br><br><br>
+
+
+		<div class="container">
+			<div class="page-header text-center">
+				<h1> @yield('title') </h1>
+			</div>
+			</div>
 		</div>
-	@endif
 
-<nav class="navbar-default">
-	@if(Auth::check())
-	<div class="container">
-			<ul class="nav navbar-nav navbar-right small">
-				<li class="pull-right">
-					<a href='/logout'> Log out {{ Auth::user()->email; }} </a>
-				</li>
-			</ul>
-	</div>
-	@endif
-</nav>
+		<div class="container">
+			@yield('content')
+		</div>
 
-<br>
-
-<!-- BEGIN pill navbar -->
-	<div class="container">
-		<ul class="nav nav-pills pull-left">
-			@if(Auth::check())
-			<li role="presentation"><a href='/'> Home </a></li>
-			<li role="presentation"><a href='/product'> Products </a></li>
-			<li role="presentation"><a href='/company'> Companies </a></li>
-			@else
-			<li role="presentation"><a href='/'> Home </a></li>
-			<li role="presentation"><a href='/signup'>Sign up</a> </li>
-			<li role="presentation"><a href='/login'>Log in</a></li> 
-			@endif
-		</ul>
-	</div>
-<!-- END pill navbar -->
-
-<br>
-
-<div class="container">
-
-	<div class="row">
-		<div class="jumbotron">
-			<h2> Inventory Management System </h2>
-			<h3>@yield('title')</h3>
-		</div>	
-	</div>
+		<div class="footer">
+			<br><br>
+		</div>
+	</body>
 
 
-	@yield('content')
 
 
-	<div class="footer">
-		<br><br>
-	</div>
+	<!-- JavaScript -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/tablesorter/jquery.tablesorter.min.js"></script>
+	<script type="text/javascript" src="/js/tablesorter/jquery.tablesorter.widgets.js"></script>
 
-</div><!--container-->
+	<script>
+		$(document).ready(function() { 
+			$("#myTable").tablesorter({
+				sortList  : [[0,0]]		
+			});
+		
+			$("#datepicker").datepicker();
+		}); 
+	</script>
 
-</body>
 </html>
+
+
+

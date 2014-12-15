@@ -1,6 +1,7 @@
 @extends('_master')
 
 @section('title')
+	Seafood Market
 @stop
 
 @section('head')
@@ -9,7 +10,11 @@
 
 @section('content')
 
-<h1> index.blade.php </h1>
-<p> This is the Carolina Fish Market and Yum Yum Factory</p>
+<div>
+	<p class="lead text-center"> Manage your business. The Inventory Management System enables the management of inventory, transactions, source and your Comapny's contacts. </p>
+
+	<img class="center-block img-responsive" src="index.jpg" alt="thomas nguyen">
+</div>
+
 
 @stop
