@@ -6,6 +6,11 @@
 		<title> Thomas Nguyen | @yield('title') </title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/js/tablesorter/themes/blue/style.css"> <!-- tablesorter blue theme -->
+
+		@media(max-width:767px){}
+		@media(min-width:768px){}
+		@media(min-width:992px){}
+		@media(min-width:1200px){}
 	</head>
 
 	<body>
