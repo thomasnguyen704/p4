@@ -20,7 +20,7 @@ class CompanyController extends \BaseController {
 
 
 	/**
-	* Display all
+	* Display 
 	* @return View
 	*/
 	public function getIndex() {
@@ -30,7 +30,7 @@ class CompanyController extends \BaseController {
 		$companies = Company::search($query);
 			return View::make('company_index')
 				->with('companies', $companies)
-				->with('query', $query);		
+				->with('query', $query);
 	}
 
 

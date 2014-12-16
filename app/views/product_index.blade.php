@@ -34,7 +34,7 @@
 			</div>
 		</div>
 		
-		<br>
+		<br><br>
 		
 		<button type="button" class="btn btn-default btn-xs">
 			<a href='/product/create'> Add Product </a></li>

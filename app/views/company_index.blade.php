@@ -33,40 +33,27 @@
 			</div>
 		</div>
 
-		<br>
+		<br><br>
 
 		<button type="button" class="btn btn-default btn-xs">
 			<a href='/company/create'> Add Company </a></li>
 		</button>
-				
-		<table id="myTable" class="table table-hover tablesorter">
-			<thead>	
-				<tr>
-					<th> Name </th>
-					<th> Street </th>
-					<th> City </th>
-					<th> State </th>
-					<th> Zip </th>
-					<th> Phone </th>
-					<th> Edit </th>
-				</tr>
-			</thead>
 
-		<tbody>
-			@foreach($companies as $company)
-				<tr>
-					<td> {{ $company['name'] }} </td>
-					<td> {{ $company['street'] }} </td>
-					<td> {{ $company['city'] }} </td>
-					<td> {{ $company['state'] }} </td>
-					<td> {{ $company['zip'] }} </td>
-					<td> {{ $company['phone'] }} </td>
-					<td> <a href='/company/edit/{{$company['id']}}'>Edit</a> </td>
-				</tr>	
-			@endforeach
-		</tbody>
+		<br><br>
 		
-		</table>
-	
+		<div class="row">
+			@foreach($companies as $company)
+			<div class="col-sm-6 col-md-4 col-md-3">
+				<address class="well">
+					<strong> {{ $company['name'] }} </strong><br>
+					{{ $company['street'] }} <br>
+					{{ $company['city'] }}, {{ $company['state'] }} {{ $company['zip'] }} <br>
+					<abbr title="Phone">P:</abbr> {{ $company['phone'] }} <br>
+					<a href='/company/edit/{{$company['id']}}'>Edit</a>
+				</address>
+			</div>
+			@endforeach
+		</div>	
+
 	@endif
 @stop
