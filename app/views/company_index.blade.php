@@ -43,7 +43,7 @@
 		
 		<div class="row">
 			@foreach($companies as $company)
-			<div class="col-sm-6 col-md-4 col-md-3">
+			<div class="col-sm-6 col-md-4 col-lg-3">
 				<address class="well">
 					<strong> {{ $company['name'] }} </strong><br>
 					{{ $company['street'] }} <br>
