@@ -63,7 +63,7 @@
 		
 		<div class="footer">
 			<div class="container">
-				<p class="text-muted text-center small lead"> Harvard University | Cambridge, MA 02138 | (617) 495-1000 </p>
+				<p class="text-muted text-center small lead"> Fish Market | 123 Anywhere St. | Charlotte, NC | (999) 867-5309 </p>
 			<div>
 		</div>
 	</body>
