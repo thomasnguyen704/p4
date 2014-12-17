@@ -68,6 +68,7 @@ class CompanyController extends \BaseController {
 		///// START Form validation /////
 		# Define rules	
 		$rules = array (
+			'name'		=>	'required',
 			'phone' 	=>	'numeric|digits:10', // no dashes
 			'zip' 		=>	'numeric|digits:5'
 		);
@@ -128,6 +129,7 @@ class CompanyController extends \BaseController {
 		///// START Form validation /////
 		# Define rules	
 		$rules = array (
+			'name'		=>	'required',
 			'phone' 	=>	'numeric|digits:10', // no dashes
 			'zip' 		=>	'numeric|digits:5'
 		);

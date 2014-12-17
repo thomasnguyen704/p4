@@ -64,6 +64,7 @@ class UserController extends BaseController {
 	
 		# Log in
 		Auth::login($user);
+		$user->sendWelcomeEmail();
 		return Redirect::to('/')->with('flash_message', 'Welcome.');
 	}
 	
@@ -115,6 +116,12 @@ class UserController extends BaseController {
 		Auth::logout();
 		return Redirect::to('/');
 	}
+
+
+
+
+
+
 
 
 }

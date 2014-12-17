@@ -3,6 +3,10 @@ html {
   min-height: 100%;
 }
 
+.flash-message{
+	margin-top: 52px;
+}
+
 body {
   margin-bottom: 60px;
 }

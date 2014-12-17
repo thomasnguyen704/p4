@@ -129,7 +129,9 @@
 	)) }}
 
 	{{ Form::hidden('id',$product['id']); }}
-		<button onClick='parentNode.submit();return false;' class="pull-right btn btn-danger"> Delete </button>
+		<button class="pull-right btn btn-danger" onClick="parentNode.submit();return false;"> 
+			Delete 
+		</button>
 	{{ Form::close() }}
 
 	</div>

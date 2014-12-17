@@ -12,9 +12,11 @@
 
 	<body>
 		@if(Session::get('flash_message'))
-			<div class="flash-message alert alert-info" role="alert">
+		<div class="flash-message alert alert-info" role="alert">
+			<div class="container">
 				{{ Session::get('flash_message') }}
 			</div>
+		</div>
 		@endif
 
 		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -61,7 +63,7 @@
 		
 		<div class="footer">
 			<div class="container">
-				<p class="text-muted text-center small lead"> Fish Market | 2417 N Tryon St. Charlotte, NC 28215 | (704) 347-1747 </p>
+				<p class="text-muted text-center small lead"> Harvard University | Cambridge, MA 02138 | (617) 495-1000 </p>
 			<div>
 		</div>
 	</body>
