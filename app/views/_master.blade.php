@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title> Thomas Nguyen | @yield('title') </title>
+		<link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/js/tablesorter/themes/blue/style.css"> <!-- tablesorter blue theme -->
 		<link rel="stylesheet" href="/style.css">
@@ -52,7 +53,7 @@
 
 		<div class="container">
 			<div class="page-header text-center">
-				<h1> @yield('title') </h1>
+				<h1 class="banner"> @yield('title') </h1>
 			</div>
 			</div>
 		</div>
