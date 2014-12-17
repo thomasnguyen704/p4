@@ -29,7 +29,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/">Inventory Management</a>
+					<a class="navbar-brand my-brand" href="/">Fish Market</a>
 				</div>
 				<div id="navbar" class="collapse navbar-collapse">
 					@if(Auth::check())

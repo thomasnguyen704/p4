@@ -1,7 +1,7 @@
 @extends('_master')
 
 @section('title')
-	Fish Market
+	Inventory Management
 @stop
 
 @section('head')
