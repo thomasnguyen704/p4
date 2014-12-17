@@ -1,4 +1,4 @@
-<h3> Live URL of the project. </h3>
+<h3> <a href="p4.thomasnguyen.me">Live URL</a> of the project. </h3>
 <p> p4.thomasnguyen.me <p>
 
 
