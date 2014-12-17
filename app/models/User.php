@@ -31,9 +31,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	public function sendWelcomeEmail() {
 		$data = array('user' => Auth::user());
+		
 		Mail::send('emails.welcome', $data, function($message) {
 			$recipient_email = $this->email;
 			$subject  = 'Welcome to the Inventory Management System!';
+    	
     		$message->to($recipient_email)->subject($subject);
 		});
 	}
