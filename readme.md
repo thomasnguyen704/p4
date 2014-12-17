@@ -35,15 +35,13 @@
 </ul>
 
 
-<p><b> The project also has the following (but not limited to) functionality </b></p>
-	<ul>
-		<li> Server side form validation </li>
-		<li> jQuery Tablesort </li>
-		<li> Search </li>
-		<li> Custom 403, 404 and 500 errors </li>
-		<li> Responsive mobile and desktop CSS framework (Bootstrap) </li>
-		<li> Blade and Eloquent "magic" code </li>
-	</ul>
+<p><b> The project also has the following (but not limited to) functionality </b><br>
+Server side form validation <br>
+jQuery Tablesort <br>
+Search <br>
+Custom 403, 404 and 500 errors <br>
+Responsive mobile and desktop CSS framework (Bootstrap) <br>
+Blade and Eloquent "magic" code <br>
 
 
 
