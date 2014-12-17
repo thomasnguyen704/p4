@@ -1,5 +1,5 @@
-<h3> <a href="p4.thomasnguyen.me">Live URL</a> of the project. </h3>
-<p> p4.thomasnguyen.me <p>
+<h3> <a href="http://p4.thomasnguyen.me/">Live URL</a> of the project. </h3>
+<p> http:/p4.thomasnguyen.me <p>
 
 
 
@@ -19,15 +19,15 @@
 
 <p><b> Demonstrates all 4 CRUD interactions (user signup/login does not count towards this). </b></p>
 
-<p> The <a href="p4.thomasnguyen.me/product"> Products </a> section has the following requirements for CRUD: </p>
+<p> The <a href="http://p4.thomasnguyen.me/product"> Products </a> section has the following requirements for CRUD: </p>
 <ul>
-	<li> <a href="p4.thomasnguyen.me/product/create"> Create </a></li>
-	<li> <a href="p4.thomasnguyen.me/product"> Read </a></li>
-	<li> <a href="p4.thomasnguyen.me/product/"> Update (note the "edit" link on the right side of the Products table) </a> </li>
-	<li> <a href="p4.thomasnguyen.me/product/edit/1"> Delete (note that each "edit" link has a button to delete a record) </a> </li>
+	<li> <a href="http://p4.thomasnguyen.me/product/create"> Create </a></li>
+	<li> <a href="http://p4.thomasnguyen.me/product"> Read </a></li>
+	<li> <a href="http://p4.thomasnguyen.me/product/"> Update (note the "edit" link on the right side of the Products table) </a> </li>
+	<li> <a href="http://p4.thomasnguyen.me/product/edit/1"> Delete (note that each "edit" link has a button to delete a record) </a> </li>
 </ul>
 
-<p> The <a href="p4.thomasnguyen.me/company"> Company </a> section has the following requirements for CRUD: </p>
+<p> The <a href="http://p4.thomasnguyen.me/company"> Company </a> section has the following requirements for CRUD: </p>
 <ul>
 	<li><a href="http://p4.thomasnguyen.me/company/create"> Create </a></li>
 	<li><a href="http://p4.thomasnguyen.me/company/"> Read </a></li>
