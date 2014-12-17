@@ -35,7 +35,7 @@ class CompanyController extends \BaseController {
 
 
 	/**
-	* Process the search form
+	* Process the Search form
 	* @return View
 	*/
 	public function getSearch() {
@@ -155,7 +155,7 @@ class CompanyController extends \BaseController {
 	         ->with('flash_message', 'Not found');
 	    }
 	    
-	    $company->fill(Input::all()); // Laravel: mass-assignment
+	    $company->fill(Input::all()); // mass-assignment
 	    $company->save();
 	   	
 	   	return Redirect::action('CompanyController@getIndex')

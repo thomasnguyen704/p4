@@ -35,7 +35,7 @@ class ProductController extends \BaseController {
 
 
 	/**
-	* Process the search form
+	* Process the "Search" form
 	* @return View
 	*/
 	public function getSearch() {
@@ -50,7 +50,7 @@ class ProductController extends \BaseController {
 
 
 	/**
-	* Show the "Add a product form"
+	* Show the "Add" form
 	* @return View
 	*/
 	public function getCreate() {
@@ -61,7 +61,7 @@ class ProductController extends \BaseController {
 
 
 	/**
-	* Process the "Add a product form"
+	* Process the "Add" form
 	* @return Redirect
 	*/
 	public function postCreate() {
@@ -161,7 +161,7 @@ class ProductController extends \BaseController {
 	         ->with('flash_message', 'Product not found');
 	    }
 	    
-	    $product->fill(Input::all()); // Laravel: mass-assignment
+	    $product->fill(Input::all()); // mass-assignment
 	    $product->save();
 	   	
 	   	return Redirect::action('ProductController@getIndex')

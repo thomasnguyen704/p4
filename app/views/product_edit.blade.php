@@ -20,7 +20,7 @@
 
 	<div class="form-horizontal" role="form">
 
-	{{----- # EDIT -----}}
+	<!-- EDIT -->
 	{{ Form::open(array('url' => '/product/edit')) }}
 
 		{{ Form::hidden('id',$product['id']); }}
@@ -123,7 +123,7 @@
 
 	<br><br><br>
 
-	{{----- # DELETE -----}}
+	<!-- Delete -->
 	{{ Form::open( array(
 		'url' => '/product/delete'
 	)) }}

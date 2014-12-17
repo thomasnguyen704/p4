@@ -43,24 +43,24 @@
 		<table id="myTable" class="table table-hover tablesorter">
 			<thead>	
 				<tr>
-					<th> Prucahse Date </th>
-					<th> Item </th>
-					<th> Company </th>
-					<th> Cost </th>
-					<th> Units </th>
-					<th> Edit </th>
+					<th class="small text-center"><span class="small"> Prucahse Date </span></th>
+					<th class="small text-center"><span class="small"> Item			</span></th>
+					<th class="small text-center"><span class="small"> Company		</span></th>
+					<th class="small text-center"><span class="small"> Cost ($)		</span></th>
+					<th class="small text-center"><span class="small"> Units (lbs)	</span></th>
+					<th class="small text-center"><span class="small"> Edit			</span></th>
 				</tr>
 			</thead>
 
 			<tbody>
 				@foreach($products as $product)
 				<tr>
-					<td> {{ $product['purchase_date'] }} </td>		
-					<td> {{ $product['item'] }} </td>
-					<td> {{ $product['company']['name'] }} </td>
-					<td> {{ $product['cost'] }} </td>
-					<td> {{ $product['units'] }} </td>
-					<td> <a href='/product/edit/{{$product['id']}}'>Edit</a> </td>
+					<td class="text-center"> <span class="small"> {{ $product['purchase_date'] }}	</span></td>	
+					<td class="text-center"> <span class="small"> {{ $product['item'] }}			</span></td>
+					<td class="text-center"> <span class="small"> {{ $product['company']['name'] }}	</span></td>
+					<td class="text-center"> <span class="small"> {{ $product['cost'] }}			</span> </td>
+					<td class="text-center"> <span class="small"> {{ $product['units'] }}			</span></td>
+					<td class="text-center"> <span class="small"> <a href='/product/edit/{{$product['id']}}'> Edit </a> </span></td>
 				</tr>
 				@endforeach
 			</tbody>

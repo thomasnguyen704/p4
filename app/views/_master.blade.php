@@ -7,6 +7,7 @@
 		<title> Thomas Nguyen | @yield('title') </title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/js/tablesorter/themes/blue/style.css"> <!-- tablesorter blue theme -->
+		<link rel="stylesheet" href="/style.css">
 	</head>
 
 	<body>
@@ -57,9 +58,11 @@
 		<div class="container">
 			@yield('content')
 		</div>
-
+		
 		<div class="footer">
-			<br><br>
+			<div class="container">
+				<p class="text-muted text-center small lead"> Fish Market | 2417 N Tryon St. Charlotte, NC 28215 | (704) 347-1747 </p>
+			<div>
 		</div>
 	</body>
 
