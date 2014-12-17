@@ -25,10 +25,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $hidden = array('password', 'remember_token');
 
 
-	/**
-	 *  New user email
-	 *
-	 */
+	/* New user email
 	public function sendWelcomeEmail() {
 		$data = array('user' => Auth::user());
 		
@@ -39,5 +36,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     		$message->to($recipient_email)->subject($subject);
 		});
 	}
+	*/
 
 }

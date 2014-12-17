@@ -37,16 +37,14 @@
 
 <p><b> The project also has the following (but not limited to) functionality: </b></p>
 	<ul>
-		<li> New user email notification </li>
 		<li> Server side form validation </li>
-		<li> Table sort </li>
+		<li> jQuery Tablesort </li>
 		<li> Search </li>
 		<li> Pages for 403, 404 and 500 errors </li>
 		<li> Responsive mobile and desktop CSS framework (Bootstrap) </li>
 		<li> Blade </li>
-		<li> Eloquent </li>
+		<li> Eloquent "magic" </li>
 	</ul>
-
 
 
 
