@@ -1,5 +1,5 @@
 <h3> Live URL of the project. </h3>
-<p> <a href="p4.thomasnguyen.me"> p4.thomasnguyen.me </a> <p>
+<p> p4.thomasnguyen.me <p>
 
 
 
