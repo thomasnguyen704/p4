@@ -6,7 +6,7 @@
 
 <h3> Description of the project (2-3+ sentences). </h3>
 
-<p> Project 4 was developed for a small business (seafood market) in Charlotte, NC. The application includes a process to manage inventory and contact information.</p>
+<p> Project 4 was developed for a small business (seafood market) in Charlotte, NC. The application is designed for interal business users where internal users can manage inventory and contact information.</p>
 
 
 
