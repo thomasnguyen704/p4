@@ -9,9 +9,27 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/js/tablesorter/themes/blue/style.css"> <!-- tablesorter blue theme -->
 		<link rel="stylesheet" href="/style.css">
+
+		<!-- JavaScript -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"> </script>
+		<script type="text/javascript" src="/js/tablesorter/jquery.tablesorter.min.js"> </script>
+		<script type="text/javascript" src="/js/tablesorter/jquery.tablesorter.widgets.js"> </script>
+		<script>
+			$(document).ready(function() { 
+				$("#myTable").tablesorter({
+					sortList  : [[0,0]]		
+				});
+			
+				$("#datepicker").datepicker();
+			}); 
+		</script>
+
 	</head>
 
+
 	<body>
+	
 		@if(Session::get('flash_message'))
 		<div class="flash-message alert alert-info" role="alert">
 			<div class="container">
@@ -66,25 +84,6 @@
 				<p class="text-muted text-center small lead"> Fish Market | 123 Anywhere St. | Charlotte, NC | (999) 867-5309 </p>
 			</div>
 		</div>
+
 	</body>
-
-
-
-
-	<!-- JavaScript -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"> </script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"> </script>
-	<script type="text/javascript" src="/js/tablesorter/jquery.tablesorter.min.js"> </script>
-	<script type="text/javascript" src="/js/tablesorter/jquery.tablesorter.widgets.js"> </script>
-
-	<script>
-		$(document).ready(function() { 
-			$("#myTable").tablesorter({
-				sortList  : [[0,0]]		
-			});
-		
-			$("#datepicker").datepicker();
-		}); 
-	</script>
-
 </html>
