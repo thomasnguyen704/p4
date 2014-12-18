@@ -55,7 +55,6 @@
 			<div class="page-header text-center">
 				<h1 class="banner"> @yield('title') </h1>
 			</div>
-			</div>
 		</div>
 
 		<div class="container">
