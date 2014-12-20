@@ -20,8 +20,6 @@
 				$("#myTable").tablesorter({
 					sortList  : [[0,0]]		
 				});
-			
-				$("#datepicker").datepicker();
 			}); 
 		</script>
 
